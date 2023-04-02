@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOG</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,300;0,400;0,600;1,100;1,200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0a3942da38.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles/pages/blog.css">
+</head>
+
+<body>
+
+    <!-- container used to force the header to the top and footer to the bottom -->
+    <container class="page_layout">
+
+        <header>
+            <!-- checkbox toggles mobile dropdown menu -->
+            <input style=display:none; type="checkbox" id="toggle">
+
+            <nav>
+                <!-- header title top left, links to homepage -->
+                <a class="navbar-logo" href="../index.html">
+                    <div class="name">NICK SPRINGALL</div>
+                    <div class="title">web developer</div>
+                </a>
+
+                <!-- div z-indexed to hide bottom of menu when toggled off  -->
+                <div class="list_cover"></div>
+
+                <!-- spans styled to draw hamburger menu logo and animate to cross when toggled on -->
+                <label class="navbar-toggler" for="toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </label>
+   
+                <!-- unordered list contains page links-->
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">HOME</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="./about.html" class="nav-link">ABOUT</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="./blog.html" class="nav-link">BLOG</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="./resume.html" class="nav-link">RESUME</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="./contact.html" class="nav-link">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    
+        <main> 
+
+            <!-- link to blog post -->
+            <a href="../pages/blog_1.html">
+                <div class="blog_post_cont">
+
+                    <!-- brown background box -->
+                    <div class="blog_post"></div>
+
+                    <div class="blog_img">
+                        <img src="../styles/components/images/blog_sunrise.jpg" alt="Sunrise">
+                    </div>
+                
+                    <h2 class="date">10/03/2023</h2>
+                    <h3 class="blog_title">Sunrise blog</h3>
+                </div>
+            </a>
+
+            <!-- link to blog post -->
+            <a href="../pages/blog_2.html">
+                <div class="blog_post_cont">
+
+                    <!-- brown background box -->
+                    <div class="blog_post"></div>
+                    
+                    <div class="blog_img">
+                        <img src="../styles/components/images/blog_building.jpg" alt="Sunrise">
+                    </div>
+                    <h2 class="date">10/03/2023</h2>
+                    <h3 class="blog_title">Building blog</h3>
+                </div>
+            </a>
+
+            <!-- link to blog post -->
+            <a href="../pages/blog_3.html">
+                <div class="blog_post_cont">
+
+                    <!-- brown background box -->
+                    <div class="blog_post"></div>
+                    
+                    <div class="blog_img">
+                        <img src="../styles/components/images/blog_computer.jpg" alt="Sunrise">
+                    </div>
+                    <h2 class="date">10/03/2023</h2>
+                    <h3 class="blog_title">Computer blog</h3>
+                </div>
+            </a>
+
+            <!-- link to blog post -->
+            <a href="../pages/blog_4.html">
+                <div class="blog_post_cont">
+
+                    <!-- brown background box -->
+                    <div class="blog_post"></div>
+
+                    <div class="blog_img">
+                        <img src="../styles/components/images/blog_plane.jpg" alt="Sunrise">
+                    </div>
+                    <h2 class="date">10/03/2023</h2>
+                    <h3 class="blog_title">Plane blog</h3>
+                </div>
+            </a>
+
+            <!-- link to blog post -->
+            <a href="../pages/blog_5.html">
+                <div class="blog_post_cont">
+
+                    <!-- brown background box -->
+                    <div class="blog_post"></div>
+
+                    <div class="blog_img">
+                        <img src="../styles/components/images/blog_rainforest.jpg" alt="Sunrise">
+                    </div>
+                    <h2 class="date">10/03/2023</h2>
+                    <h3 class="blog_title">Rainforest blog</h3>
+                </div>
+            </a>
+        </main>
+
+        <footer>
+
+            <!-- footer icon links to professional pages-->
+            <span class="professional_links">
+                <div class="prof_links_box">
+                    <a href="https://www.github.com" target="_blank">
+                        <i class="fa-brands fa-github" style="color: #c6a3a3;"></i>
+                    </a>
+                </div>
+
+                <div class="prof_links_box">
+                    <a href="https://www.linkedin.com" target="_blank">
+                        <i class="fa-brands fa-linkedin" style="color: #c6a3a3;"></i>
+                    </a>
+                </div> 
+
+                <div class="prof_links_box">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <i class="fa-brands fa-facebook" style="color: #c6a3a3;"></i>
+                    </a>
+                </div>
+
+                <div class="prof_links_box">
+                    <a href="https://www.instagram.com" target="_blank">
+                        <i class="fa-brands fa-instagram" style="color: #c6a3a3;"></i>
+                    </a>
+                </div> 
+            </span>
+
+            <!-- click to call button has device call directly -->
+            <span class="call">   
+                    <a class="phone_number" href="tel:0411846274"> 
+                        <div class="box">
+                            <i class="fa-solid fa-phone phone_number" style="color: #c6a3a3;">
+                            </i>
+
+                            <span class="call_text">CALL ME NOW
+                            </span>
+                        </div>
+                    </a>
+            </span>  
+        </footer>
+    </container>
+</body>
+
+</html>

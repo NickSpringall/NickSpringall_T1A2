@@ -1,0 +1,185 @@
+@import "../defaults/breakpoints";
+@import "../defaults/colors";
+@import "../components/utils";
+    
+* {
+    @include primary_background();
+}
+    // flex display justified space-between seperates navbar logo on left from nav items on right
+    nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+    height: 75px;
+    line-height: 75px;
+    background: $primary-background;
+
+    // grid display used to seperate name and title
+    .navbar-logo {
+        color: $sec_text;
+        font-weight: bold;
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-template-rows: 50px 10px;
+        transition: 0.4s;
+        line-height: 0;
+
+        .name {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: lighter;
+            grid: 1;
+            color: $primary_text;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: lighter;
+            grid: 2;
+            display: flex;
+            justify-content:flex-end;
+        }
+
+        &:hover {
+            background: $hover;
+            cursor: pointer; 
+        }
+    }
+
+    
+    .nav-list {
+        display: flex;
+
+        .nav-item {
+            cursor: pointer;
+            height: 100%;
+            padding: 0 30px;
+            transition: .4s;
+
+            &:hover {
+                background: $hover;
+            }
+        }
+
+        .nav-link {
+            color: $primary_text;
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    // padding lowered to be equal to font size for tablet 
+    nav {
+        padding: 0 1rem;
+
+        // font-sizes made smaller to accomodate nav items over smaller navbar width
+        .navbar-logo {
+
+            .name {
+                font-size: 18px;
+            }
+            .title {
+                font-size: 14px;
+            }
+        }
+
+        .nav-list .nav-item {
+                padding: 0 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    nav {
+        padding: 0 0;
+
+        // navbar-logo z-indexed to be at top, above the list cover
+        .navbar-logo {
+            z-index: 3;
+            position: relative;
+            left: 10%;
+        }
+
+        // list cover makes bottom (contact page link) of menu hidden when toggled off screen. Z-index above nav list and below list cover
+        .list_cover {
+            display: grid;
+            position: absolute;
+            z-index: 2;
+            background: $primary-background;
+            height: 75px;
+            width: 100%;
+        }
+        
+        // when navbar-toggler is disengaged, menu moves up on Y axis 100% behind list cover
+        .nav-list {
+            display: grid; 
+            position: absolute;
+            background: $sec_text;
+            width: 100%;
+            top: 75px;
+            left: 0;
+            transform: translateY(-100%);
+            z-index: 1;
+            transition: .6s;
+        
+            .nav-item {
+                padding-left: 35px;
+
+                &:active {
+                    background: $mob_hover;
+                }
+            }
+
+            .nav-link {
+                color: $primary-background;
+            }
+        }
+
+        // toggler z-indexed above list cover, grid display creates 3 even spans for toggler icon
+        .navbar-toggler {
+                display: grid;
+                z-index: 3;
+                left: 8px;
+                height: min-content;
+                cursor: pointer;
+                margin: 18px 30px 0 0;
+
+                // toggler icon lines
+                .bar {
+                    width: 40px;
+                    height: 5px;
+                    margin-bottom: 10px;
+                    background: $sec_text;
+                    border-radius: 10%;
+                    transition: .4s;
+                }
+            }
+        }
+
+    input:checked ~ nav {
+
+        // checkbox checked moves the menu into it's visable 'home' position
+        .nav-list {
+            transform: translateY(0);
+        }
+
+        // checkbox check animation to create cross icon. 1st and 3rd bar rotate 45 degrees and centre one disappears
+        .navbar-toggler {
+            margin-top: 35px;
+            .bar:nth-child(1) {
+                position: absolute;
+                transform: rotate(45deg);
+            }
+            .bar:nth-child(2) {
+                display: none;
+            }
+            .bar:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+

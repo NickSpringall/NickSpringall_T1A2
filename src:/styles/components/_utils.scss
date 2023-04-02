@@ -1,0 +1,25 @@
+@import "../defaults/colors";
+
+@mixin primary_background() {
+    background-color: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'ibm plex sans condensed', sans-serif;
+}
+
+@mixin page_layout() {
+    background: none;
+    min-height: 100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+
+@mixin main_text() {
+    font-family: 'ibm plex sans condensed', sans-serif;
+    color: $primary_text;
+}

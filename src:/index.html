@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/pages/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,300;0,400;0,600;1,100;1,200&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/0a3942da38.js" crossorigin="anonymous"></script>
+<title>HOME</title>
+</head>
+<body>
+    <!-- container to force the header to the top and footer to the bottom -->
+    <container class="page_layout">
+
+        <!-- checkbox toggles mobile dropdown menu -->
+        <header>
+            <input style=display:none; type="checkbox" id="toggle">
+
+            <nav>
+                <!-- header title top left, links to homepage -->
+                <a class="navbar-logo" href="./index.html">
+                    <div class="name">NICK SPRINGALL</div>
+                    <div class="title">web developer</div>
+                </a>
+                
+                <!-- div z-indexed to hide bottom of menu when toggled off  -->
+                <div class="list_cover"></div>
+
+           <!-- spans styled to draw hamburger menu logo and animate to cross when toggled on -->
+            <label class="navbar-toggler" for="toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                </label>
+   
+
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">HOME</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="./pages/about.html" class="nav-link">ABOUT</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="./pages/blog.html" class="nav-link">BLOG</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="./pages/resume.html" class="nav-link">RESUME</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="../pages/contact.html" class="nav-link">CONTACT</a>
+                </li>
+            </nav>
+        </header>
+    
+        <main> 
+
+            <!-- light brown background box -->
+            <div class="main_background_box">
+
+                <!-- main heading -->
+                <div class="headings">
+                    <h1 class="hi">Hi, I'm Nick - </h1>
+                    <h2 class="sub">web development student at Coder Academy</h2>
+                </div>
+            </div>
+
+            <!-- dark brown strip at bottom containing project question and link to contact page -->
+            <div class="sec_background_box">
+
+                <div class="project">
+                    <h2 class="question">Have a project you'd like to discuss?</h2>
+                
+                    <div class="contact_btn_position">
+                        <a href="./pages/contact.html">
+                            <h3 class="contact_btn">Get in touch!</h3>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- div positioning main image -->
+            <div class="laptop_img">
+                <img src="./styles/components/images/person_on_laptop.jpg">
+            </div>
+        </main>
+
+    <footer>
+
+        <!-- footer icon links to professional pages-->=
+        <span class="professional_links">
+            <div class="prof_links_box">
+                <a href="https://www.github.com" target="_blank">
+                    <i class="fa-brands fa-github" style="color: #c6a3a3;"></i>
+                </a>
+            </div>
+
+            <div class="prof_links_box">
+                <a href="https://www.linkedin.com" target="_blank">
+                    <i class="fa-brands fa-linkedin" style="color: #c6a3a3;"></i>
+                </a>
+            </div> 
+
+            <div class="prof_links_box">
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fa-brands fa-facebook" style="color: #c6a3a3;"></i>
+                </a>
+            </div>
+
+            <div class="prof_links_box">
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="fa-brands fa-instagram" style="color: #c6a3a3;"></i>
+                </a>
+            </div> 
+        </span>
+
+        <!-- click to call button has device call directly -->
+        <span class="call">   
+            <a class="phone_number" href="tel:0411846274"> 
+                <div class="box">
+                    <i class="fa-solid fa-phone phone_number" style="color: #c6a3a3;">
+                    </i>
+
+                    <span class="call_text">CALL ME NOW
+                    </span>
+                </div>
+            </a>
+        </span>
+    </footer>
+
+</container>
+</body>
+</html>
